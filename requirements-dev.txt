@@ -1,0 +1,8 @@
+-r requirements.txt
+black==25.12.0
+mypy
+pytest
+pytest-cov
+ruff
+sphinx
+myst-parser

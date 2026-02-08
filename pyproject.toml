@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tsp-analytics"
+version = "0.1.0"
+description = "A Python module that makes it easy to download current prices of TSP from the official website and perform basic data analysis using pandas and matplotlib."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+dependencies = [
+    "matplotlib>=3.6,<4.0",
+    "pandas>=1.5,<3.0",
+    "requests>=2.31,<3.0",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/srichs/tsp-analytics"
+Documentation = "https://github.com/srichs/tsp-analytics/tree/main/docs"
+Repository = "https://github.com/srichs/tsp-analytics"
+Issues = "https://github.com/srichs/tsp-analytics/issues"
+
+[project.optional-dependencies]
+dev = [
+    "black",
+    "mypy",
+    "pytest",
+    "pytest-cov",
+    "ruff",
+    "sphinx",
+    "myst-parser",
+]
+
+[tool.mypy]
+ignore_missing_imports = true
+disable_error_code = ["arg-type", "attr-defined", "import-untyped", "index"]
+files = ["src"]
+
+[tool.black]
+line-length = 88
+target-version = ["py310", "py311", "py312"]

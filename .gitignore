@@ -1,0 +1,9 @@
+src/tsp/__pycache__
+src/tsp/analytics/__pycache__
+tests/__pycache__
+tests/analytics/__pycache__
+docs/sphinx/_build
+docs/sphinx/generated
+.tsp_test_data
+.pytest_cache
+.venv
