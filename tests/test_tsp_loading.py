@@ -572,7 +572,7 @@ def test_ensure_dataframe_raises_without_data() -> None:
     tsp_price.latest = None
     tsp_price.check = lambda: None
 
-    with pytest.raises(RuntimeError, match="TSP price data is not available"):
+    with pytest.raises(RuntimeError, match="TSP data is not available"):
         tsp_price.get_latest_prices()
 
 
