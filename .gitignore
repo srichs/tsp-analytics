@@ -1,9 +1,11 @@
 src/tsp/__pycache__
 src/tsp/analytics/__pycache__
+src/tsp_analytics.egg-info
 tests/__pycache__
 tests/analytics/__pycache__
 docs/sphinx/_build
 docs/sphinx/generated
+dist
 .tsp_test_data
 .pytest_cache
 .venv
