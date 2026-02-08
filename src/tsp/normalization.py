@@ -52,9 +52,7 @@ class NormalizationMixin:
         if (dataframe[fund_columns] < 0).any().any():
             raise ValueError("TSP price data contains negative values")
         if dataframe.empty:
-            raise ValueError(
-                "TSP data contains no usable rows after normalization"
-            )
+            raise ValueError("TSP data contains no usable rows after normalization")
         dataframe = dataframe.sort_values("Date", ascending=True)
         dataframe = dataframe.drop_duplicates(subset=["Date"], keep="last")
         return dataframe.reset_index(drop=True)
@@ -65,9 +63,7 @@ class NormalizationMixin:
             return
         missing = [fund for fund in required_funds if fund not in dataframe.columns]
         if missing:
-            raise ValueError(
-                f'TSP data missing required funds: {", ".join(missing)}'
-            )
+            raise ValueError(f'TSP data missing required funds: {", ".join(missing)}')
         empty_funds = [fund for fund in required_funds if dataframe[fund].isna().all()]
         if empty_funds:
             raise ValueError(
