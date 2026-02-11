@@ -9,6 +9,9 @@ description = "A Python module that makes it easy to download current prices of 
 readme = "README.md"
 requires-python = ">=3.10"
 license = { file = "LICENSE" }
+authors = [
+    {name = "srichs", email = "srichs@pm.me"},
+]
 dependencies = [
     "matplotlib>=3.6,<4.0",
     "pandas>=1.5,<3.0",
