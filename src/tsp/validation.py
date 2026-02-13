@@ -2,7 +2,7 @@
 
 from datetime import date, time
 from decimal import Decimal
-from numbers import Real
+from numbers import Integral, Real
 
 
 class ValidationMixin:
@@ -15,7 +15,7 @@ class ValidationMixin:
 
     @staticmethod
     def _validate_positive_int(value: int, name: str) -> None:
-        if isinstance(value, bool) or not isinstance(value, int) or value <= 0:
+        if isinstance(value, bool) or not isinstance(value, Integral) or value <= 0:
             raise ValueError(f"{name} must be a positive integer")
 
     @staticmethod
@@ -32,14 +32,14 @@ class ValidationMixin:
 
     @staticmethod
     def _validate_year(value: int, name: str = "year") -> None:
-        if isinstance(value, bool) or not isinstance(value, int) or value <= 0:
+        if isinstance(value, bool) or not isinstance(value, Integral) or value <= 0:
             raise ValueError(f"{name} must be a positive integer")
 
     @staticmethod
     def _validate_month(value: int, name: str = "month") -> None:
         if (
             isinstance(value, bool)
-            or not isinstance(value, int)
+            or not isinstance(value, Integral)
             or not 1 <= value <= 12
         ):
             raise ValueError(f"{name} must be an integer between 1 and 12")
