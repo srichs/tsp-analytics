@@ -1,6 +1,7 @@
 # tsp-analytics
 
 [![CI](https://github.com/srichs/tsp-analytics/actions/workflows/ci.yml/badge.svg)](https://github.com/srichs/tsp-analytics/actions/workflows/ci.yml)
+[![Docs](https://img.shields.io/github/actions/workflow/status/srichs/tsp-analytics/ci.yml?branch=main&label=docs)](https://github.com/srichs/tsp-analytics/actions/workflows/ci.yml)
 [![PyPI](https://img.shields.io/pypi/v/tsp-analytics)](https://pypi.org/project/tsp-analytics/)
 
 A Python module for retrieving the prices of Thrift Savings Plan (TSP) funds, calculating analytics, and visualizing historical performance.
