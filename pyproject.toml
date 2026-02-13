@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "tsp-analytics"
-version = "0.1.0"
+version = "0.1.1"
 description = "A Python module that makes it easy to download current prices of TSP from the official website and perform basic data analysis using pandas and matplotlib."
 readme = "README.md"
 requires-python = ">=3.10"
