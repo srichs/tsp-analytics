@@ -1,6 +1,7 @@
 from datetime import time
 from decimal import Decimal
 
+import numpy as np
 import pytest
 
 
@@ -23,3 +24,9 @@ def test_validation_helpers_reject_invalid_values(tsp_price) -> None:
 
     with pytest.raises(ValueError, match="between 0 and 1"):
         tsp_price._validate_confidence(1.0)
+
+
+def test_validation_helpers_accept_numpy_integer_types(tsp_price) -> None:
+    tsp_price._validate_positive_int(np.int64(5), "periods")
+    tsp_price._validate_year(np.int32(2024))
+    tsp_price._validate_month(np.int16(12))
